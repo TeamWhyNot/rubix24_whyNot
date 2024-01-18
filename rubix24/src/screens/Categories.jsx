@@ -24,14 +24,14 @@ const Categories = () => {
     { name: "ZEE9", img: require("../assets/Netflix.png") },
     { name: "ZEE10", img: require("../assets/Netflix.png") },
 
-    // Add other platforms similarly
+ 
   ];
 
   const [selectedPlatforms, setSelectedPlatforms] = useState([]);
 
   const handlePlatformClick = (platformName) => {
     if (selectedPlatforms.includes(platformName)) {
-      // If platform is already selected, remove it
+      
       setSelectedPlatforms((prevSelected) =>
         prevSelected.filter((platform) => platform !== platformName)
       );
