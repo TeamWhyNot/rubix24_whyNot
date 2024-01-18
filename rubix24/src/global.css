@@ -9,6 +9,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .login{
     background: url(/src/assets/bgDesktop.png);
     background-repeat: no-repeat;
@@ -35,4 +36,28 @@ input{
 .form{
     padding:3%;
     padding-bottom: 1.5%;
+}
+
+.active-sub {
+    background: linear-gradient(180deg, rgba(20, 20, 20, 0.59), rgba(77, 36, 103, 0.3));
+}
+
+::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* Hide scrollbar for Firefox */
+/* Note: The scrollbar may still be visible in some situations, 
+   like when using the mouse wheel or touchpad */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #f1f1f1 #888;
 }
