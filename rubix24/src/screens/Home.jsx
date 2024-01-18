@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect , useState } from "react";
 import Navbar from "../components/Navbar";
 import OTTPlatformCard from "../components/OttPlatformCard";
 import UpcomingCard from "../components/UpcomingCard";
+import { onAuthStateChanged } from "@firebase/auth";
+import { auth } from "../firebase"
+import { useNavigate } from "react-router";
 import {
   RemoveScrollBar,
   noScrollbarsClassName,
@@ -126,6 +129,23 @@ const Home = () => {
   const filteredTrendingData = trendingData.filter(
     (data) => data.platform === selectedPlatform
   );
+
+  const navigate = useNavigate();
+  useEffect(() => {
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        const uid = user.uid;
+        console.log("alredy in")
+        // ...
+      } else {
+        navigate('/login')
+      }
+    });
+
+  }, [onAuthStateChanged])
 
   return (
     <div className="main_Home h-full w-[100vw] flex-col  justify-center  items-start py-4 space-y-6 ">

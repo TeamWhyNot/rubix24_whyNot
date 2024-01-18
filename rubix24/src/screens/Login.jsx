@@ -1,12 +1,36 @@
-import React, {useState, useContext, useRef} from 'react'
+import React, {useState, useContext, useRef,useEffect} from 'react'
 import { Button } from '../components/Button';
 import GoogleButton from 'react-google-button';
 import authContext from '../context/authContext';
 import { auth } from '../firebase';
+import { onAuthStateChanged } from '@firebase/auth';
+import { useNavigate } from 'react-router';
 const Login = () => {
   const emailRef = useRef()
   const passwordRef = useRef()
   const { GoogleSignIn , Signin } = useContext(authContext);
+
+  const navigate=useNavigate();
+
+  
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        const uid = user.uid;
+        navigate('/')
+        // ...
+      } else {
+        console.log("not yet sign in")
+      }
+    });
+    
+    
+  
+    
+  }, [onAuthStateChanged])
+  
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -18,11 +42,12 @@ const Login = () => {
 
   return (
     <div className='login flex flex-shrink-0 flex-col-reverse '>
-      <div className='form h-auto w-full bg-[#141414] flex-col   justify-center items-center @media(max-width: 768px){ py-[5%] px-[4%] }'>
-        <div className="header text-white">
-          <h1 className=' text-2xl font-bold mb-[1.5rem] @media (min-width: 768px) { text-xl } '>Login</h1>
+      <div className='form h-auto w-80% bg-[#141414] flex-col   justify-center items-center  }'>
+        <div className="header text-white flex justify-center items-center">
+          <h1 className=' text-[2.5rem]  font-semibold mb-[1.5rem] @media (min-width: 768px) { text-xl } '>Login</h1>
         </div>
-        <form className="login-form flex flex-col gap-8 "onSubmit={handleSignIn} >
+       <div className='flex justify-center items-center flex-col '>
+       <form className="login-form flex justify-center w-[90%] flex-col gap-6 mt-2 "onSubmit={handleSignIn} >
         <div className="mail flex flex-col gap-2">
           <div className="heading text-xl text-white @media (max-width: 768px){ text-lg } ">Email</div>
           <input 
@@ -49,7 +74,9 @@ const Login = () => {
         
         
       </div>
-    </div>
+       </div>
+       </div>
+   
   )
 }
 

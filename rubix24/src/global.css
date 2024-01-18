@@ -33,6 +33,10 @@ input{
 .main_Home {
     background-color: #141414;
 }
+.form{
+    padding:3%;
+    padding-bottom: 1.5%;
+}
 
 .active-sub {
     background: linear-gradient(180deg, rgba(20, 20, 20, 0.59), rgba(77, 36, 103, 0.3));
