@@ -1,12 +1,36 @@
-import React, {useState, useContext, useRef} from 'react'
+import React, {useState, useContext, useRef,useEffect} from 'react'
 import { Button } from '../components/Button';
 import GoogleButton from 'react-google-button';
 import authContext from '../context/authContext';
 import { auth } from '../firebase';
+import { onAuthStateChanged } from '@firebase/auth';
+import { useNavigate } from 'react-router';
 const Login = () => {
   const emailRef = useRef()
   const passwordRef = useRef()
   const { GoogleSignIn , Signin } = useContext(authContext);
+
+  const navigate=useNavigate();
+
+  
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        const uid = user.uid;
+        navigate('/')
+        // ...
+      } else {
+        console.log("not yet sign in")
+      }
+    });
+    
+    
+  
+    
+  }, [onAuthStateChanged])
+  
 
   const handleSignIn = (e) => {
     e.preventDefault();
