@@ -2,6 +2,7 @@ import React from "react";
 import Home from "../screens/Home";
 import Login from "../screens/Login";
 import Categories from "../screens/Categories";
+import Test from "../screens/Test";
 
 const routes = [
   {
@@ -15,6 +16,10 @@ const routes = [
   {
     path: "/categories",
     element: <Categories />,
+  },
+  {
+    path: "/test",
+    element: <Test />,
   },
 ];
 
