@@ -4,19 +4,23 @@ import { db } from './firebase';
 import {
     createBrowserRouter,
     RouterProvider,
-  } from "react-router-dom";
+} from "react-router-dom";
 
 import routes from './routes/route';
+import AuthState from './context/AuthState';
 
 const App = () => {
 
-    
+
     const routings = createBrowserRouter(routes);
-    
+
 
     return (
         <div>
-            <RouterProvider router={routings} ></RouterProvider>
+            <AuthState>
+                <RouterProvider router={routings}></RouterProvider>
+            </AuthState>
+
         </div>
     )
 }
