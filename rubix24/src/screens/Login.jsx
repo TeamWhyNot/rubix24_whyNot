@@ -6,15 +6,23 @@ import { auth } from '../firebase';
 const Login = () => {
   const emailRef = useRef()
   const passwordRef = useRef()
-  const { GoogleSignIn } = useContext(authContext);
-const {Signin} = useContext(authContext);
+  const { GoogleSignIn , Signin } = useContext(authContext);
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+    
+    Signin(email, password);
+  };
+
   return (
     <div className='login flex flex-shrink-0 flex-col-reverse '>
       <div className='form h-auto w-full bg-[#141414] flex-col   justify-center items-center @media(max-width: 768px){ py-[5%] px-[4%] }'>
         <div className="header text-white">
           <h1 className=' text-2xl font-bold mb-[1.5rem] @media (min-width: 768px) { text-xl } '>Login</h1>
         </div>
-        <form className="login-form flex flex-col gap-8 "onSubmit={Signin} >
+        <form className="login-form flex flex-col gap-8 "onSubmit={handleSignIn} >
         <div className="mail flex flex-col gap-2">
           <div className="heading text-xl text-white @media (max-width: 768px){ text-lg } ">Email</div>
           <input 
