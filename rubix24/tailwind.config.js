@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
@@ -14,6 +13,12 @@ module.exports = {
       },
     },
   },
-
   plugins: [],
+  corePlugins: {
+    scrollbarWidth: false,
+    scrollbarColor: false,
+  },
+  variants: {
+    scrollbar: ["dark"],
+  },
 };
