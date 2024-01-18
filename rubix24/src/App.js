@@ -4,18 +4,12 @@ import { db } from './firebase';
 
 const App = () => {
 
-    const checkFire = async () => {
-        const docRef = await addDoc(collection(db, "cities"), {
-            name: "Tokyo",
-            country: "Japan"
-        });
-        console.log("Document added")
-    }
+    
     
 
     return (
         <div>
-            <button onClick={checkFire} >Press me</button></div>
+            <button>Press me</button></div>
     )
 }
 
