@@ -3,6 +3,7 @@ import Home from "../screens/Home";
 import Login from "../screens/Login";
 import Categories from "../screens/Categories";
 import Test from "../screens/Test";
+import SignUp from "../screens/SignUp";
 
 const routes = [
   {
@@ -21,6 +22,11 @@ const routes = [
     path: "/test",
     element: <Test />,
   },
+  {
+    path: "/signup",
+    element:<SignUp/> ,
+  },
+
 ];
 
 export default routes;
