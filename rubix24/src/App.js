@@ -1,21 +1,23 @@
 import React from 'react'
 import { collection, addDoc } from "firebase/firestore";
 import { db } from './firebase';
+import {
+    createBrowserRouter,
+    RouterProvider,
+  } from "react-router-dom";
+
+import routes from './routes/route';
 
 const App = () => {
 
-    const checkFire = async () => {
-        const docRef = await addDoc(collection(db, "cities"), {
-            name: "Tokyo",
-            country: "Japan"
-        });
-        console.log("Document added")
-    }
+    
+    const routings = createBrowserRouter(routes);
     
 
     return (
         <div>
-            <button onClick={checkFire} >Press me</button></div>
+            <RouterProvider router={routings} ></RouterProvider>
+        </div>
     )
 }
 
