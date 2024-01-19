@@ -1,0 +1,18 @@
+
+{
+    "movies": [
+      {
+        "title": "Avengers",
+        "year": 2022,
+        "poster": "moviepic-3.png",
+        "platforms": ["Disney+", "Netflix"]
+      },
+      {
+        "title": "Movie Title 2",
+        "year": 2021,
+        "poster": "url_to_poster_image2",
+        "platforms": ["SonyLIV", "Prime Video"]
+      }
+    ]
+  }
+  
