@@ -15,7 +15,7 @@ const Categories = () => {
 
   const platforms = [
     { name: "NETFLIX", img: require("../assets/Netflix.png") },
-    { name: "PRIME", img: require("../assets/Netflix.png") },
+    { name: "PRIME", img: require("../assets/primesmall.png") },
     { name: "HOTSTAR", img: require("../assets/Netflix.png") },
     { name: "ZEE5", img: require("../assets/Netflix.png") },
     { name: "ZEE6", img: require("../assets/Netflix.png") },

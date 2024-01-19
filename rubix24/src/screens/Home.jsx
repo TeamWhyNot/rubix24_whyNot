@@ -13,17 +13,15 @@ import {
 const Home = () => {
   const ottPlatforms = [
     { name: "Netflix", image: require("../assets/Netflix.png") },
-    { name: "Amazon Prime", image: require("../assets/Netflix.png") },
-    { name: "Disney+", image: require("../assets/Netflix.png") },
-    { name: "Zee5", image: require("../assets/Netflix.png") },
+    { name: "Amazon Prime", image: require("../assets/primesmall.png") },
+    { name: "Disney+", image: require("../assets/disneybig.webp") },
+    { name: "Spotify", image: require("../assets/spotify.png") },
     { name: "Netflix", image: require("../assets/Netflix.png") },
-    { name: "Amazon Prime", image: require("../assets/Netflix.png") },
-    { name: "Disney+", image: require("../assets/Netflix.png") },
-    { name: "Zee5", image: require("../assets/Netflix.png") },
-    { name: "Netflix", image: require("../assets/Netflix.png") },
-    { name: "Amazon Prime", image: require("../assets/Netflix.png") },
-    { name: "Disney+", image: require("../assets/Netflix.png") },
-    { name: "Zee5", image: require("../assets/Netflix.png") },
+    { name: "Amazon Prime", image: require("../assets/primesmall.png") },
+    { name: "Disney+", image: require("../assets/disneybig.webp") },
+    { name: "Spotify", image: require("../assets/spotify.png") },
+    { name: "Netflix", image: require("../assets/Netflix.png") }
+   
   ];
 
   const upcomingData = [
@@ -155,10 +153,20 @@ const Home = () => {
       {/* Start next div here in the main div main_Home */}
       <div className="flex w-full items-center justify-center ">
         <div className="rounded-3xl h-[30%] shadow-[0px 4px 4px rgba(0,0,0,0.25)] w-[90%]  active-sub ">
-          <p className="px-16 py-8 text-2xl font-manrope text-white h-56">
+          <p className="px-16 py-8 text-2xl font-manrope text-white ">
             Active Subscription
           </p>
-          {/* put active subscriptions here */}
+          <div className="l flex gap-3 w-[100vw] flex flex-col gap-y-4 overflow-x-auto px-6">
+            {/* Render 3 OTT platforms within the 'l' class */}
+            {ottPlatforms.slice(0, 3).map((platform, index) => (
+              <OTTPlatformCard
+                key={index}
+                name={platform.name}
+                image={platform.image}
+                onClick={() => handlePlatformClick(platform.name)}
+              />
+            ))}
+          </div>
         </div>
       </div>
       <p className="text-white font-manrope text-3xl mx-12">
