@@ -7,6 +7,7 @@ import SignUp from "../screens/SignUp";
 import TrackDetails from "../screens/TrackDetails";
 import Track from "../screens/Track";
 import Customization from "../screens/Customization";
+import Compare from "../screens/Compare";
 
 const routes = [
   {
@@ -40,6 +41,8 @@ const routes = [
   {
     path: "/customization",
     element:<Customization/> ,
+    path: "/compare",
+    element:<Compare/> ,
   },
 
 ];

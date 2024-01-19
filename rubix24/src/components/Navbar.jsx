@@ -35,10 +35,7 @@ const Navbar = () => {
         <Link to="/track" className='nav-link' onClick={() => setMobileMenuOpen(false)}>
           TRACK
         </Link>
-        <Link to="/reminder" className='nav-link' onClick={() => setMobileMenuOpen(false)}>
-          REMINDER
-        </Link>
-        <Button className="logOut  w-[5rem] h-[3rem]">Logout</Button>
+        <Button onClick={Logout} className="logOut  w-[5rem] h-[3rem]">Logout</Button>
       </div>
       <button className="open-menu-btn hidden" onClick={toggleMobileMenu}>
         <GiHamburgerMenu />
