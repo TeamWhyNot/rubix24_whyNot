@@ -41,10 +41,11 @@ const routes = [
   {
     path: "/customization",
     element:<Customization/> ,
+  },
+  {
     path: "/compare",
     element:<Compare/> ,
   },
-
 ];
 
 export default routes;

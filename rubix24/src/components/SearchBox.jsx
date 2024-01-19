@@ -58,7 +58,7 @@ const SearchBox = (props) => {
           {movies.map((movie) => (
             <li key={movie.title}>
               <img
-                src={movie.poster}
+                src={require('../assets/avengers.jpg')}
                 alt={movie.title}
                 className="w-16 h-24"
               />
