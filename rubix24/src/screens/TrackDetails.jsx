@@ -4,9 +4,9 @@ import Navbar from '../components/Navbar'
 const TrackDetails = () => {
     return (
         <div className='h-[100vh] bg-[#141414] w-[100vw]'>
-            <div className=' p-2'>
-                <Navbar />
-            </div>
+            <div className="w-[100%] justify-start  flex items-center ">
+        <Navbar />
+      </div>
             <div className=" main_Track h-[100vh] w-[100vw] lg:flex-row flex flex-col flex-wrap items-center justify-center bg-[#141414]">
                 <div className='bg-[#141414] h-[50%] z-1 lg:w-[50%] w-[100%] flex items-center p-4 justify-center '>
                     <div className='w-[100%] text-white'>

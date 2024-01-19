@@ -35,7 +35,8 @@ const SearchBox = (props) => {
         <div className="bar">
           <FaSearch className="text-white" />
           <input
-            className=".inputl inputSearch text-white"
+            className="bg-transparent h-full text-xl w-full text-[#121212] ml-[5px] border-[none];
+            inputSearch text-white"
             type="text"
             placeholder="Search..."
             value={searchTerm}

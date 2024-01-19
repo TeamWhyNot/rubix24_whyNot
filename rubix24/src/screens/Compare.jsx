@@ -5,7 +5,9 @@ const Compare = () => {
     return (
         <div className='flex flex-col'>
         <div className='bg-[#141414]'>
-            <Navbar/>
+        <div className="w-[100%] justify-start  flex items-center ">
+        <Navbar />
+      </div>
         </div>
             <div className='flex-col lg:flex bg-[#141414] lg:flex-row space-y-5 items-center  justify-center  gap-5 h-[100vh] w-[100vw]'>
 
