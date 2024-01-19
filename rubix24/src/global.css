@@ -169,7 +169,7 @@ svg{
     align-items: center;
   }
   
-  input {
+  .inputl {
     background-color: transparent;
     border: none;
     height: 100%;
