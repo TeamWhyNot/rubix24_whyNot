@@ -37,7 +37,7 @@ const Navbar = () => {
         </Link>
         <Button onClick={Logout} className="logOut  w-[5rem] h-[3rem]">Logout</Button>
       </div>
-      <button className="open-menu-btn hidden" onClick={toggleMobileMenu}>
+      <button className="open-menu-btn hidden justify-start" onClick={toggleMobileMenu}>
         <GiHamburgerMenu />
       </button>
     </nav>
