@@ -27,7 +27,7 @@ const TrackDetails = () => {
                         <div>
                             <h1>Category</h1>
                         </div>
-                        <div>
+                        <div className=''>
                             <div className="w-[370px] h-[78px] items-center justify-center p-2 shadow-xl drop-shadow-xl flex gap-2 overflow-x-auto bg-stone-300 bg-opacity-50 rounded-[40px]">
                                 <div className="w-[118px] flex items-center justify-center h-10 bg-zinc-100 rounded-2xl">
                                     <h1>
@@ -66,22 +66,23 @@ const TrackDetails = () => {
                         </div>
                         <div className='flex gap-10 items-center justify-center'>
                             <div className='shadow-md drop-shadow-md '>
-                                <img src={require('../assets/Netflix.png')} ></img>
+                                <img src={require('../assets/primesmall.png')} ></img>
                             </div>
                             <div>
                                 <div>
-                                    <h1>NETFLIX</h1>
+                                    <h1>PRIME VIDEO</h1>
                                 </div>
                                 <div>
-                                    <h1>upto 20 jan</h1>
+                                    <h1>upto 4 feb</h1>
                                 </div>
 
                             </div>
                             <div>
-                                <h1>299/month</h1>
+                                <h1>199/month</h1>
                             </div>
 
                         </div>
+                       
 
 
 
