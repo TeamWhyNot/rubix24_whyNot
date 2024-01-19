@@ -146,17 +146,17 @@ const Home = () => {
   }, [onAuthStateChanged])
 
   return (
-    <div className="main_Home h-full w-[100vw] flex-col  justify-center  items-start py-4 space-y-6 ">
+    <div className="main_Home h-full w-[full] flex-col  justify-center  items-start py-4 space-y-6 ">
       <div className="w-[100%] justify-center flex items-center ">
         <Navbar />
       </div>
       {/* Start next div here in the main div main_Home */}
       <div className="flex w-full items-center justify-center ">
-        <div className="rounded-3xl h-[30%] shadow-[0px 4px 4px rgba(0,0,0,0.25)] w-[90%]  active-sub ">
+        <div className="rounded-3xl h-[30%] shadow-[0px 4px 4px rgba(0,0,0,0.25)] w-[100%]  active-sub ">
           <p className="px-16 py-8 text-2xl font-manrope text-white ">
             Active Subscription
           </p>
-          <div className="l flex gap-3 w-[100vw] flex flex-col gap-y-4 overflow-x-auto px-6">
+          <div className="l flex gap-3 w-[100vw] gap-y-4 overflow-x-auto px-6">
             {/* Render 3 OTT platforms within the 'l' class */}
             {ottPlatforms.slice(0, 3).map((platform, index) => (
               <OTTPlatformCard
@@ -174,7 +174,7 @@ const Home = () => {
       </p>
       <div className="w-[100vw] flex flex-col gap-y-4 overflow-x-auto px-6 ">
       
-        <div className="flex w-[100vw]">
+        <div className="flex  w-[100vw]">
           {ottPlatforms.map((platform, index) => (
             <OTTPlatformCard
               key={index}
