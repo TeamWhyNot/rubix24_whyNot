@@ -149,8 +149,9 @@ const Home = () => {
 
   return (
     <div className="main_Home h-full w-[100vw] flex-col  justify-center  items-start py-4 space-y-6 ">
-      <div className="w-[100%] justify-center flex items-center ">
-        <Navbar />
+      
+      <div className="navbar_place w-[100%] justify-center flex items-center ">
+      <Navbar />
       </div>
       {/* Start next div here in the main div main_Home */}
       <div className="flex w-full items-center justify-center ">
