@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 .container {
     margin-inline: 6rem;
 }
@@ -9,32 +10,41 @@
 @tailwind components;
 @tailwind utilities;
 
+.card {
+    background: rgb(123, 36, 96);
+    background: linear-gradient(56deg, rgba(123, 36, 96, 1) 35%, rgba(134, 81, 170, 1) 100%);
+}
 
-.login{
+
+.login {
     background: url(/src/assets/bgDesktop.png);
     background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  background-color: #141414;
-  
+    background-size: cover;
+    height: 100vh;
+    background-color: #141414;
+
 }
-input{
-    border-radius:0.9rem ;
+
+input {
+    border-radius: 0.9rem;
     background-color: #121212;
     height: 4%;
     padding: 2%;
     color: white;
 }
+
 @media (max-width: 767px) {
-    input{
+    input {
         padding: 5%;
-    } 
-}  
+    }
+}
+
 .main_Home {
     background-color: #141414;
 }
-.form{
-    padding:3%;
+
+.form {
+    padding: 3%;
     padding-bottom: 1.5%;
 }
 
@@ -45,14 +55,15 @@ input{
 /* For WebKit-based browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
     width: 1px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #323232; /* darkslategray color */
-  }
-  
-  /* For Firefox */
-  * {
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #323232;
+    /* darkslategray color */
+}
+
+/* For Firefox */
+* {
     scrollbar-color: #323232 transparent;
     scrollbar-width: thin;
   }
@@ -145,3 +156,4 @@ svg{
         
     }
 }
+    

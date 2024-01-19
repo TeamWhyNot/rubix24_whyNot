@@ -4,6 +4,8 @@ import Login from "../screens/Login";
 import Categories from "../screens/Categories";
 import Test from "../screens/Test";
 import SignUp from "../screens/SignUp";
+import TrackDetails from "../screens/TrackDetails";
+import Track from "../screens/Track";
 
 const routes = [
   {
@@ -25,6 +27,14 @@ const routes = [
   {
     path: "/signup",
     element:<SignUp/> ,
+  },
+  {
+    path: "/trackdet",
+    element:<TrackDetails/> ,
+  },
+  {
+    path: "/track",
+    element:<Track/> ,
   },
 
 ];
