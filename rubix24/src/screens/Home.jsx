@@ -5,6 +5,7 @@ import UpcomingCard from "../components/UpcomingCard";
 import { onAuthStateChanged } from "@firebase/auth";
 import { auth } from "../firebase"
 import { useNavigate } from "react-router";
+import { Button } from "../components/Button";
 import {
   RemoveScrollBar,
   noScrollbarsClassName,
@@ -152,6 +153,7 @@ const Home = () => {
       
       <div className="navbar_place w-[100%] justify-center flex items-center ">
       <Navbar />
+      
       </div>
       {/* Start next div here in the main div main_Home */}
       <div className="flex w-full items-center justify-center ">
