@@ -4,7 +4,7 @@ const TrackDetails = () => {
     return (
         <div className=" main_Track h-[100vh] w-[100vw] lg:flex-row flex flex-col flex-wrap items-center justify-center bg-[#141414]">
             <div className='bg-[#141414] h-[50%] z-1 lg:w-[50%] w-[100%] flex items-center p-4 justify-center '>
-                <div className='w-[100%] text-white' >
+                <div className='w-[100%] text-white'>
                     <div className='flex items-center justify-start'>
                         <h1>Total Spent on ott</h1>
                     </div>

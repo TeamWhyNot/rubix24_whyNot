@@ -6,6 +6,7 @@ import Test from "../screens/Test";
 import SignUp from "../screens/SignUp";
 import TrackDetails from "../screens/TrackDetails";
 import Track from "../screens/Track";
+import Compare from "../screens/Compare";
 
 const routes = [
   {
@@ -35,6 +36,10 @@ const routes = [
   {
     path: "/track",
     element:<Track/> ,
+  },
+  {
+    path: "/compare",
+    element:<Compare/> ,
   },
 
 ];
