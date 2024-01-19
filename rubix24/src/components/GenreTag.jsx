@@ -1,5 +1,3 @@
-// GenreTag.js
-
 import React, { useState } from "react";
 
 const GenreTag = ({ name }) => {
